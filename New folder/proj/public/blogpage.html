@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Post</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+header nav a {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+#blog-post {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+#blog-post .blog-header h1 {
+    font-size: 36px;
+}
+#blog-post .blog-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+#related-blogs {
+    margin: 50px auto;
+    max-width: 800px;
+}
+#related-blogs h2 {
+    font-size: 24px;
+}
+#related-blogs .blog-box {
+    display: inline-block;
+    width: 48%;
+    margin: 10px;
+}
+
+.blog-main-relate{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-main-relate .blog-box a{
+    padding-right: 40px;
+    padding-bottom: 20px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.blog-main-relate .blog-box a:hover{
+    font-size: larger;
+    color: #725241;
+    text-decoration: underline;
+    
+}
+
+/* General image styling */
+#blog-post .blog-content img,
+#related-blogs .blog-box img {
+    max-width: 50%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Hover effect to zoom and enhance the shadow */
+#blog-post .blog-content img:hover,
+#related-blogs .blog-box img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* For the related blog images */
+#related-blogs .blog-box iframe {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    #related-blogs .blog-box {
+        width: 100%; /* Full width on smaller screens */
+        margin: 20px 0;
+    }
+}
+
+
+    </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <section id="header">
+            <a href="index.html"><img src="image/logo.png" alt="eagle"
+                    class="logo"></a>
+            <div class="nav">
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a class="active" href="blog.html">Expert-Talks</a></li>
+                    <li><a href="Information.html">Information</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag"><a href="cart.html"><img
+                                src="image/cart.png" alt="cart"
+                                class="logo"></a></li>
+                    <a href="#" id="close"><i><img src="image/menu.png"
+                                alt></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><img src="image/cart.png" alt="cart"
+                        class="logo"></a>
+                <i id="bar"><img src="image/menu.png" alt></i>
+            </div>
+        </section>
+
+        <section id="page-header" class="blog-header">
+
+            <h2>#readmore</h2>
+            <p>Read all case studies about our products!</p>
+
+        </section>
+
+        <!-- Blog Post Section -->
+        <section id="blog-post">
+            <div class="blog-header">
+                <h1>Profitable Capsicum farming in Poly house India</h1>
+                <p><small>Published on: Feb 25, 2024 | Channel: Organic Acre
+                </small></p>
+            </div>
+            <div class="blog-content">
+                <div class="blog-img">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/quMNdpNatuM?si=MG3SrpYy7URANueO"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+                <p>Welcome to our comprehensive guide on profitable capsicum
+                    farming, tailored for aspiring farmers and entrepreneurs in
+                    India. In this detailed video, we delve into the nuances of
+                    capsicum cultivation, exploring its potential as a
+                    profitable business venture, especially within the context
+                    of greenhouse or polyhouse farming.
+
+                    Capsicum, also known as bell pepper or sweet pepper, is a
+                    versatile and high-value crop extensively cultivated
+                    worldwide. However, its cultivation in India has gained
+                    significant traction due to its increasing demand in
+                    domestic and international markets. With favorable climatic
+                    conditions and growing awareness about the health benefits
+                    of capsicum, the agricultural landscape in India offers
+                    ample opportunities for capsicum farming.
+
+                    We begin our exploration by understanding the basics of
+                    capsicum farming, including its growth requirements,
+                    preferred soil conditions, and suitable climatic zones.
+                    Whether you're in Telugu-speaking regions, like Andhra
+                    Pradesh or Telangana, or in Kannada-speaking areas like
+                    Karnataka, or even in states like Odisha, where farming
+                    practices may vary, our guide provides insights applicable
+                    to diverse geographical locations.
+
+                    One of the key aspects we focus on is greenhouse farming,
+                    particularly the utilization of polyhouses for capsicum
+                    cultivation. Polyhouse farming offers several advantages,
+                    including controlled environmental conditions, protection
+                    from adverse weather, and enhanced yield quality. We discuss
+                    the process of setting up polyhouses, covering essential
+                    aspects such as construction, design considerations, and
+                    cost-effective methods.
+
+                    For those interested in exploring niche markets and adding
+                    value to their produce, we delve into the realm of colored
+                    capsicum farming in polyhouses. Colored capsicums, including
+                    red, yellow, and orange varieties, command premium prices in
+                    both domestic and international markets. We provide insights
+                    into the cultivation techniques and market prospects for
+                    colored capsicums, empowering farmers to tap into this
+                    lucrative segment.
+
+                    The profitability of capsicum farming is a central theme
+                    throughout our discussion. We analyze the economic viability
+                    of capsicum cultivation, considering factors such as input
+                    costs, market demand, and potential returns on investment.
+                    With prudent planning and efficient management practices,
+                    capsicum farming can emerge as a highly profitable business
+                    venture for both seasoned farmers and newcomers to the
+                    agricultural sector.
+
+                    Moreover, we extend our discussion beyond farming techniques
+                    to explore the broader scope of profitable businesses in
+                    India. As we look ahead to 2024, the business landscape in
+                    India continues to evolve, presenting diverse opportunities
+                    across various sectors. Whether you're considering
+                    agricultural ventures, exploring innovative business ideas,
+                    or seeking to leverage emerging trends, our guide offers
+                    valuable insights to steer you in the right direction.
+
+                    Additionally, we address the relevance of polyhouse farming
+                    in urban settings, including rooftop and terrace gardens.
+                    Urban agriculture, facilitated by polyhouses, not only
+                    contributes to food security but also promotes sustainable
+                    living practices in densely populated areas. We discuss the
+                    process of setting up polyhouses on rooftops and terraces,
+                    highlighting their role in urban farming initiatives.
+
+                    In collaboration with experts and practitioners in the
+                    field, our video provides practical advice, actionable tips,
+                    and real-world examples to guide you through the intricacies
+                    of capsicum farming and polyhouse cultivation. Whether
+                    you're a farmer seeking to diversify your crop portfolio or
+                    an entrepreneur exploring new business opportunities, our
+                    guide equips you with the knowledge and resources to thrive
+                    in the dynamic agricultural landscape of India.</p>
+            </div>
+        </section>
+
+        <!-- Related Blogs -->
+        <section id="related-blogs">
+            <h2>Related Posts</h2>
+            <div class="blog-main-relate">
+
+                <div class="blog-box">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4PRMvK1zDHE?si=2gJfNdFpHgi0M3Uq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a href="blog1.html">Harvesting Of Organic Vegetables From Rooftop Terrace Garden</a>
+                </div>
+                <div class="blog-box">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/c5pekMjAapo?si=7Vl_JBpMv7iBZ1E3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a href="blog2.html">Multilayer farming</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="section-p1">
+            <div class="col">
+                <img src="image/logo.png" class="logo" alt="logo">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>526 Vadodara Road, Street 32,
+                    Gujarat</p>
+                <p><strong>Phone: </strong>+91 9876543210</p>
+                <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="signin.html">Sign In</a>
+                <a href="cart.html">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="contact.html">Help</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <p>Secured Payment Gateways</p>
+                <img src="image/paypal-784403_1280.png" alt="paypal">
+            </div>
+            <div class="copyright">
+                <p>© 2024, Tech etc - HTML CSS ECOMMERCE TEMPLATE</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

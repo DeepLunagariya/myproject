@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather site</title>
+    <style>
+        *{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+  }
+  body{
+    background-color: rgb(0, 0, 0);
+  }
+  .main{
+      width: 90%;
+      max-width: 470px;
+      background: linear-gradient(to bottom right, rgb(0, 106, 255), rgb(107, 149, 174), rgb(170, 226, 240) );
+      border-radius: 20px;
+      padding: 40px 40px;
+      margin: 100px auto;
+      text-align: center;
+  }
+  .search{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search input{
+      border-radius: 30px;
+      border: none;
+      outline: 0cap;
+      background: #ebffeb;
+      color: #555;
+      padding: 10px 20px;
+      height: 60px;
+      margin-right: 60px;
+      flex: 1;
+  }
+  .search button{
+    background-color: aliceblue;
+    border-radius: 50px;
+    padding: 10px 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .search img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  button:hover{
+    background-color: rgb(148, 226, 231);
+  }
+  .weather{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font: 1em sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: aliceblue;
+  }
+  .detail{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .detail, .humidity{
+    margin-left: 5%;
+  }
+  
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="search">
+            <input type="text" name="search" id="search" placeholder="ENTER THE CITY NAME">
+            <button type="button" name="button" id="button"><img src="weather check/weather-app-img/images/search.png" alt="search"></button>
+        </div> 
+
+        <div class="weather">
+            <div class="climate">
+                <img src="weather check/weather-app-img/images/clear.png" alt="weather-icon" class="weather-icon">
+                <h3 class="temperature">25°C</h3>
+                <h2 class="description">Clear</h2>
+            </div><br>
+            <div class="city"><h1>Rajkot</h1></div>
+        </div>
+
+        <div class="detail">
+            <div class="wind">
+                <img src="weather check/weather-app-img/images/wind.png" alt="wind">
+                <h2 class="wind-speed">4km/hr</h2>
+            </div>
+
+            <div class="humidity">
+                <img src="weather check/weather-app-img/images/humidity.png" alt="humidity">
+                <h2 class="humidity-value">50%</h2>
+                <h2>Humidity</h2>
+            </div>
+        </div>
+    </div>
+
+<script>
+    const apiKey = "f105a41e273f3297348ee8f4996510d9";
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+    
+    const searchBox = document.querySelector(".search input");
+    const searchBtn = document.querySelector(".search button");
+
+    async function checkWeather(city){
+        const response = await fetch(`${apiUrl}${city}&appid=${apiKey}`);
+        const data = await response.json();
+
+        console.log(data);
+
+        document.querySelector(".city h1").innerHTML = data.name;
+        document.querySelector(".temperature").innerHTML = Math.round(data.main.temp) + "°C";
+        document.querySelector(".description").innerHTML = data.weather[0].description;
+        document.querySelector(".humidity-value").innerHTML = data.main.humidity + "%";
+        document.querySelector(".wind-speed").innerHTML = data.wind.speed + "km/hr";
+
+        // Update weather icon based on weather conditions
+        const weatherIcon = document.querySelector(".weather-icon");
+        const weatherCondition = data.weather[0].main.toLowerCase();
+
+        if (weatherCondition.includes("clear")) {
+            weatherIcon.src = "weather check/weather-app-img/images/clear.png";
+            weatherIcon.alt = "clear";
+        } else if (weatherCondition.includes("clouds")) {
+            weatherIcon.src = "weather check/weather-app-img/images/clouds.png";
+            weatherIcon.alt = "clouds";
+        } else if (weatherCondition.includes("rain")) {
+            weatherIcon.src = "weather check/weather-app-img/images/rain.png";
+            weatherIcon.alt = "rain";
+        } else if (weatherCondition.includes("drizzle")) {
+            weatherIcon.src = "weather check/weather-app-img/images/drizzle.png";
+            weatherIcon.alt = "drizzle";
+        } else if (weatherCondition.includes("thunderstorm")) {
+            weatherIcon.src = "weather check/weather-app-img/images/thunderstorm.png";
+            weatherIcon.alt = "thunderstorm";
+        } else if (weatherCondition.includes("snow")) {
+            weatherIcon.src = "weather check/weather-app-img/images/.png";
+            weatherIcon.alt = "snow";
+        } else if (weatherCondition.includes("mist") || weatherCondition.includes("fog")) {
+            weatherIcon.src = "weather check/weather-app-img/images/.png";
+            weatherIcon.alt = "mist";
+        } else {
+            weatherIcon.src = "weather check/weather-app-img/images/default.png";
+            weatherIcon.alt = "default";
+        }
+    }
+
+    searchBtn.addEventListener("click", () => {
+        checkWeather(searchBox.value);
+    })
+
+    // Optional: check weather for a default city on page load
+    checkWeather('Bangalore');
+</script>
+
+</body>
+</html>

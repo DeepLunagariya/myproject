@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Post</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+header nav a {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+#blog-post {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+#blog-post .blog-header h1 {
+    font-size: 36px;
+}
+#blog-post .blog-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+#related-blogs {
+    margin: 50px auto;
+    max-width: 800px;
+}
+#related-blogs h2 {
+    font-size: 24px;
+}
+#related-blogs .blog-box {
+    display: inline-block;
+    width: 48%;
+    margin: 10px;
+}
+
+.blog-main-relate{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-main-relate .blog-box a{
+    padding-right: 40px;
+    padding-bottom: 20px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.blog-main-relate .blog-box a:hover{
+    font-size: larger;
+    color: #725241;
+    text-decoration: underline;
+    
+}
+
+/* General image styling */
+#blog-post .blog-content img,
+#related-blogs .blog-box img {
+    max-width: 50%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Hover effect to zoom and enhance the shadow */
+#blog-post .blog-content img:hover,
+#related-blogs .blog-box img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* For the related blog images */
+#related-blogs .blog-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    #related-blogs .blog-box {
+        width: 100%; /* Full width on smaller screens */
+        margin: 20px 0;
+    }
+}
+
+
+    </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <section id="header">
+            <a href="index.html"><img src="image/logo.png" alt="eagle"
+                    class="logo"></a>
+            <div class="nav">
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Expert-Talks</a></li>
+                    <li><a class="active"
+                            href="Information.html">Information</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag"><a href="cart.html"><img
+                                src="image/cart.png" alt="cart"
+                                class="logo"></a></li>
+                    <a href="#" id="close"><i><img src="image/menu.png"
+                                alt></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><img src="image/cart.png" alt="cart"
+                        class="logo"></a>
+                <i id="bar"><img src="image/menu.png" alt></i>
+            </div>
+        </section>
+
+        <section id="page-header" class="blog-header">
+
+            <h2>#readmore</h2>
+            <p>Read all case studies about our products!</p>
+
+        </section>
+
+        <!-- info Post Section -->
+        <section id="blog-post">
+            <div class="blog-header">
+                <h1>Chestnuts</h1>
+                <p><small>Published on: 02 Jan 2024 | Author: John
+                        Doe</small></p>
+            </div>
+            <div class="blog-content">
+                <div class="blog-img">
+                    <img src="image/product/chestnuts-151927_1280.png" alt>
+                </div>
+                <p>Information About Chestnuts:
+                    <br>1.Botanical Name: Castanea species.
+                    <br>2.Nutritional Value: Chestnuts are rich in carbohydrates,
+                    fiber, and vitamin C. Unlike most other nuts, chestnuts are
+                    relatively low in fat and calories, making them a healthy
+                    option.
+                    <br>3.Culinary Uses: They can be eaten roasted, boiled, or used in
+                    various dishes like soups, stuffing, and desserts. In some
+                    cultures, chestnut flour is used for baking.
+                    <br>4.Harvest Season: Typically harvested in the autumn months.
+                    Health Benefits: Chestnuts support digestive health due to
+                    their fiber content and provide a good source of
+                    antioxidants, which help boost immunity.
+                </p>
+            </div>
+        </section>
+
+        <!-- Related Blogs -->
+        <section id="related-blogs">
+            <h2>Related Posts</h2>
+            <div class="blog-main-relate">
+
+                <div class="blog-box">
+                    <img src="image/product/seed.png" alt="related1"><br>
+                    <a href="infopage.html">Seed germination info</a>
+                </div>
+                <div class="blog-box">
+                    <img src="image/product/lawn-6999711_1280.png"
+                        alt="related2"><br>
+                    <a href="infopage2.html">Lawn info</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="section-p1">
+            <div class="col">
+                <img src="image/logo.png" class="logo" alt="logo">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>526 Vadodara Road, Street 32,
+                    Gujarat</p>
+                <p><strong>Phone: </strong>+91 9876543210</p>
+                <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="signin.html">Sign In</a>
+                <a href="cart.html">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="contact.html">Help</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <p>Secured Payment Gateways</p>
+                <img src="image/paypal-784403_1280.png" alt="paypal">
+            </div>
+            <div class="copyright">
+                <p>© 2024, Tech etc - HTML CSS ECOMMERCE TEMPLATE</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
